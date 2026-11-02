@@ -17,7 +17,9 @@ Keep the extracted folder in place. Chrome loads the extension from it.
 - **Thumbnail:** show a still thumbnail instead of a blank screen.
 - **1W / 1M / ALL:** listening and watching totals, stored on your device.
 
-Thumbnail images load from YouTube. Native picture-in-picture is not covered.
+Settings and stats stay on your device. No analytics. Thumbnails load from YouTube.
+
+Native picture-in-picture is not covered.
 
 ## Update
 
@@ -25,4 +27,4 @@ If you cloned the repo, run `git pull` in its folder. If you downloaded a ZIP, r
 
 Then click **Reload** at `chrome://extensions` and refresh YouTube.
 
-[Privacy](PRIVACY.md) · [MIT License](LICENSE)
+[MIT License](LICENSE)
