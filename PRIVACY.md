@@ -40,6 +40,6 @@ Uninstall YouListen from Chrome to remove its locally stored extension preferenc
 
 ## Policy changes and contact
 
-Updates to the extension may require an updated policy; the effective date above identifies this version. For questions, open YouListen's Chrome Web Store listing and use the developer contact information provided there.
+Updates to the extension may require an updated policy; the effective date above identifies this version. For questions, open an issue in the Issues tab of the GitHub repository from which you downloaded YouListen. Do not include private browsing information or personal data in a public issue.
 
 YouListen is not affiliated with or endorsed by YouTube or Google.

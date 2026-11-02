@@ -4,13 +4,37 @@ Hide the moving picture. Keep listening.
 
 YouListen is a small, open-source Chrome extension for using YouTube as background audio. It keeps YouTube's player controls, uses plain JavaScript and CSS, and stores preferences and listening totals on your device. No account, backend, analytics SDK, or runtime dependencies.
 
-## Install locally
+## Install in Chrome from GitHub
 
-1. Extract the release ZIP into a permanent folder, or use this source folder.
-2. Disable any earlier YouTube-hiding experiment so its CSS does not override the switches.
-3. Open `chrome://extensions`, enable **Developer mode**, and select **Load unpacked**.
-4. Select the folder containing `manifest.json`. Pin YouListen from Chrome's extensions menu.
-5. Refresh existing YouTube tabs after installing or updating.
+No Chrome Web Store account, payment, or build tools are needed to install this extension locally.
+
+1. On this GitHub repository, click **Code > Download ZIP**. If a release is available, you can instead download `youlisten-1.2.1.zip` from **Releases**.
+2. **Extract the ZIP** into a permanent folder. Do not load the ZIP itself. Keep the extracted folder in place after installation; Chrome loads the extension from it.
+3. Open Chrome and type **`chrome://extensions`** in the address bar.
+4. Turn on **Developer mode** in the top-right corner.
+5. Click **Load unpacked** and select the extracted folder that directly contains **`manifest.json`**. GitHub's source ZIP usually contains a nested folder such as `mp4del-main`; select that inner folder.
+6. Click Chrome's puzzle-piece **Extensions** button and pin **YouListen**.
+7. Refresh any open YouTube tabs. Video is hidden by default; use the YouListen icon to change settings.
+
+If you installed an earlier YouTube-hiding experiment, disable it so its CSS does not override YouListen's switches. On a managed work or school browser, your administrator may prevent loading unpacked extensions.
+
+### Updating
+
+Local installations do not update automatically. Download the new source or release ZIP, extract it, and copy its contents into the **same installed folder**, replacing the old files. Open `chrome://extensions`, click **Reload** on YouListen's card, then refresh YouTube. Keeping the same installation and folder preserves its settings and counters; uninstalling removes them.
+
+### Removing
+
+Open `chrome://extensions` and turn YouListen off to disable it, or click **Remove** to uninstall it. Refresh YouTube afterward. Removing the extension deletes its locally saved preferences and statistics.
+
+### Troubleshooting
+
+- **Manifest missing:** select the folder containing `manifest.json`, not the outer download folder or ZIP.
+- **Changes do not appear:** reload YouListen in Chrome's extensions page and refresh YouTube.
+- **Video stays hidden after switching hiding off:** disable any older hiding extension or experiment.
+
+## Support
+
+Open an issue in this repository's **Issues** tab. Include your Chrome version, what happened, and steps to reproduce it. Avoid posting private browsing information or personal data.
 
 ## Use
 
@@ -53,8 +77,8 @@ The only API permissions are `storage` and `alarms`. Content scripts run only on
 
 - `node --test tests/*.test.cjs` runs the dependency-free test suite.
 - `node tests/browser.cjs` runs optional Playwright integration checks with the actual extension and controlled media pages. See [the testing guide](docs/TESTING.md) for development-only tooling and live checks.
-- `python scripts/build-release.py` creates and validates the runtime-only ZIP in `dist/`, with `manifest.json` at its root.
-- [Store listing copy](store-assets/LISTING.md), [privacy declarations](store-assets/PRIVACY-DISCLOSURES.md), [release checklist](docs/RELEASE.md), and [verification results](docs/RELEASE-VERIFICATION.md) accompany the release.
-- `docs/privacy.html` is a standalone, script-free copy of the privacy policy, ready to host at a public HTTPS URL for the store dashboard.
+- `python scripts/build-release.py` creates and validates the installable ZIP in `dist/`, with `manifest.json` at its root. Attach this ZIP to a GitHub Release if desired.
+- See the [GitHub release guide](docs/RELEASE.md) and [verification results](docs/RELEASE-VERIFICATION.md). Earlier optional Chrome Web Store materials remain in `store-assets/`; they are not needed for GitHub distribution.
+- [PRIVACY.md](PRIVACY.md) is readable directly on GitHub. `docs/privacy.html` is an optional standalone HTML copy; a separate policy website is not needed for this local installation workflow.
 
 Licensed under [MIT](LICENSE). YouListen is an independent project and is not affiliated with or endorsed by YouTube or Google.
