@@ -1,0 +1,17 @@
+/* Default to hidden even before the settings read completes. */
+html:not([data-yta-visible]) video {
+  opacity: 0 !important;
+}
+html:not([data-yta-visible]) .html5-video-player {
+  background-color: #242424 !important;
+}
+html:not([data-yta-visible])[data-yta-thumbnail] #movie_player {
+  background-image: var(--yta-thumbnail) !important;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+/* Ambient effects can contain moving imagery outside the video itself. */
+html:not([data-yta-visible]) #cinematics {
+  visibility: hidden !important;
+}

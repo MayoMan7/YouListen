@@ -1,0 +1,43 @@
+{
+  "testedAt": "2026-11-02T04:22:27.820Z",
+  "results": [
+    {
+      "name": "Live watch page hides video",
+      "status": "passed"
+    },
+    {
+      "name": "Playback advances while hidden; native play control remains",
+      "status": "passed"
+    },
+    {
+      "name": "Native pause control works",
+      "status": "passed"
+    },
+    {
+      "name": "Seeking, speed and volume work",
+      "status": "passed"
+    },
+    {
+      "name": "Live hidden playback recorded as listening",
+      "status": "passed",
+      "listeningMs": 4088
+    },
+    {
+      "name": "Reveal works and focused playback counts as watching",
+      "status": "passed",
+      "watchingMs": 1609
+    },
+    {
+      "name": "Thumbnail preference applies on live page",
+      "status": "passed"
+    },
+    {
+      "name": "Fullscreen keeps video hidden",
+      "status": "passed"
+    },
+    {
+      "name": "Temporary reveal expires and hides again",
+      "status": "passed"
+    }
+  ]
+}

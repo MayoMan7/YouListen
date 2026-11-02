@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouListen</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="settings.js" defer></script>
+  <script src="stats-history.js" defer></script>
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <header>YouListen</header>
+  <main>
+    <label class="row" title="Turning this off shows video until tomorrow">
+      <span>Hide video</span>
+      <input id="toggle" type="checkbox" role="switch" aria-describedby="pause-note" disabled>
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="row">
+      <span>Thumbnail</span>
+      <input id="appearance" type="checkbox" role="switch" disabled>
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <p id="pause-note" hidden>Off until tomorrow</p>
+    <section class="stats" aria-label="Playback statistics">
+      <div class="periods" role="group" aria-label="Statistics period">
+        <label title="Last 7 days"><input type="radio" name="period" value="1W" aria-label="Last 7 days" checked><span>1W</span></label>
+        <label title="Last 30 days"><input type="radio" name="period" value="1M" aria-label="Last 30 days"><span>1M</span></label>
+        <label title="All recorded time"><input type="radio" name="period" value="ALL" aria-label="All recorded time"><span>ALL</span></label>
+      </div>
+      <div class="totals">
+        <div><span class="stat-label">Listening</span><output id="listening">0m</output></div>
+        <div><span class="stat-label">Watching</span><output id="watching">0m</output></div>
+      </div>
+    </section>
+    <p id="error" role="alert"></p>
+  </main>
+</body>
+</html>
