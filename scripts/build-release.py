@@ -1,4 +1,4 @@
-"""Build a runtime-only Chrome Web Store ZIP. Python standard library only."""
+"""Build a runtime-only ZIP for local Chrome installation. Python standard library only."""
 from pathlib import Path
 import hashlib
 import json

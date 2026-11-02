@@ -3,3 +3,9 @@ node_modules/
 .playwright/
 __pycache__/
 *.pyc
+
+# Local-only Chrome Web Store preparation
+store-assets/
+scripts/render-assets.cjs
+scripts/render-policy.py
+docs/privacy.html

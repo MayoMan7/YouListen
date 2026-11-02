@@ -78,7 +78,7 @@ The only API permissions are `storage` and `alarms`. Content scripts run only on
 - `node --test tests/*.test.cjs` runs the dependency-free test suite.
 - `node tests/browser.cjs` runs optional Playwright integration checks with the actual extension and controlled media pages. See [the testing guide](docs/TESTING.md) for development-only tooling and live checks.
 - `python scripts/build-release.py` creates and validates the installable ZIP in `dist/`, with `manifest.json` at its root. Attach this ZIP to a GitHub Release if desired.
-- See the [GitHub release guide](docs/RELEASE.md) and [verification results](docs/RELEASE-VERIFICATION.md). Earlier optional Chrome Web Store materials remain in `store-assets/`; they are not needed for GitHub distribution.
-- [PRIVACY.md](PRIVACY.md) is readable directly on GitHub. `docs/privacy.html` is an optional standalone HTML copy; a separate policy website is not needed for this local installation workflow.
+- See the [GitHub release guide](docs/RELEASE.md) and [verification results](docs/RELEASE-VERIFICATION.md).
+- [PRIVACY.md](PRIVACY.md) is readable directly on GitHub; a separate policy website is not needed for local installation.
 
 Licensed under [MIT](LICENSE). YouListen is an independent project and is not affiliated with or endorsed by YouTube or Google.

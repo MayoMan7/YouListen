@@ -21,8 +21,8 @@ Tell existing users to replace the files in their current installed folder, clic
 
 ## Privacy and support
 
-The policy is in `PRIVACY.md`, with an optional HTML copy in `docs/privacy.html`. Support goes through this repository's Issues tab. No separate hosted policy page or store listing is needed for this distribution method.
+The policy is in `PRIVACY.md`. Support goes through this repository's Issues tab. No separate hosted policy page or store listing is needed for this distribution method.
 
-## Verification and optional artwork
+## Verification
 
-See `RELEASE-VERIFICATION.md` for the tested behavior and limits. Earlier Chrome Web Store preparation files in `store-assets/` are retained as optional artwork and reference material; their store-submission instructions do not apply to this GitHub release.
+See `RELEASE-VERIFICATION.md` for the tested behavior and limits.
