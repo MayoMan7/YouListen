@@ -14,8 +14,8 @@
     "default_popup": "popup.html",
     "default_title": "YouListen",
     "default_icon": {
-      "16": "icons/icon-16.png",
-      "32": "icons/icon-32.png"
+      "16": "youlisten-icon.png",
+      "32": "youlisten-icon.png"
     }
   },
   "content_scripts": [
@@ -37,9 +37,9 @@
   ],
   "minimum_chrome_version": "109",
   "icons": {
-    "16": "icons/icon-16.png",
-    "32": "icons/icon-32.png",
-    "48": "icons/icon-48.png",
-    "128": "icons/icon-128.png"
+    "16": "youlisten-icon.png",
+    "32": "youlisten-icon.png",
+    "48": "youlisten-icon.png",
+    "128": "youlisten-icon.png"
   }
 }

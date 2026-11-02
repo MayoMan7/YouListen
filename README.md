@@ -8,11 +8,11 @@ YouListen is a small, open-source Chrome extension for using YouTube as backgrou
 
 No Chrome Web Store account, payment, or build tools are needed to install this extension locally.
 
-1. On this GitHub repository, click **Code > Download ZIP**. If a release is available, you can instead download `youlisten-1.2.1.zip` from **Releases**.
+1. On this GitHub repository, click **Code > Download ZIP**.
 2. **Extract the ZIP** into a permanent folder. Do not load the ZIP itself. Keep the extracted folder in place after installation; Chrome loads the extension from it.
 3. Open Chrome and type **`chrome://extensions`** in the address bar.
 4. Turn on **Developer mode** in the top-right corner.
-5. Click **Load unpacked** and select the extracted folder that directly contains **`manifest.json`**. GitHub's source ZIP usually contains a nested folder such as `mp4del-main`; select that inner folder.
+5. Click **Load unpacked** and select the extracted folder that directly contains **`manifest.json`**. GitHub's source ZIP usually contains a nested folder such as `YouListen-main`; select that inner folder.
 6. Click Chrome's puzzle-piece **Extensions** button and pin **YouListen**.
 7. Refresh any open YouTube tabs. Video is hidden by default; use the YouListen icon to change settings.
 
@@ -20,7 +20,7 @@ If you installed an earlier YouTube-hiding experiment, disable it so its CSS doe
 
 ### Updating
 
-Local installations do not update automatically. Download the new source or release ZIP, extract it, and copy its contents into the **same installed folder**, replacing the old files. Open `chrome://extensions`, click **Reload** on YouListen's card, then refresh YouTube. Keeping the same installation and folder preserves its settings and counters; uninstalling removes them.
+Local installations do not update automatically. Download the new source ZIP, extract it, and copy its contents into the **same installed folder**, replacing the old files. Open `chrome://extensions`, click **Reload** on YouListen's card, then refresh YouTube. Keeping the same installation and folder preserves its settings and counters; uninstalling removes them.
 
 ### Removing
 
@@ -73,12 +73,10 @@ Chrome 109 or later is declared in the manifest. There is no compilation step. R
 
 The only API permissions are `storage` and `alarms`. Content scripts run only on `https://www.youtube.com/*`. No DOM polling loop or permanent background process is used. A minute checkpoint alarm exists during playback; a one-second display timer exists only while the popup is open.
 
-## Tests and release
+## Tests
 
-- `node --test tests/*.test.cjs` runs the dependency-free test suite.
-- `node tests/browser.cjs` runs optional Playwright integration checks with the actual extension and controlled media pages. See [the testing guide](docs/TESTING.md) for development-only tooling and live checks.
-- `python scripts/build-release.py` creates and validates the installable ZIP in `dist/`, with `manifest.json` at its root. Attach this ZIP to a GitHub Release if desired.
-- See the [GitHub release guide](docs/RELEASE.md) and [verification results](docs/RELEASE-VERIFICATION.md).
-- [PRIVACY.md](PRIVACY.md) is readable directly on GitHub; a separate policy website is not needed for local installation.
+Run `node --test tests/*.test.cjs` for the dependency-free test suite.
+
+Optional browser checks use Playwright as development-only tooling. Set `PLAYWRIGHT_PATH` to your installed Playwright module, `CHROMIUM_PATH` to its Chromium executable, and `TEST_PROFILE` to a new disposable directory. Run `node tests/browser.cjs`. Never use your personal Chrome profile for tests.
 
 Licensed under [MIT](LICENSE). YouListen is an independent project and is not affiliated with or endorsed by YouTube or Google.
